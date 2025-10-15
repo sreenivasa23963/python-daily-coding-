@@ -1,0 +1,122 @@
+'''
+#take a string, reverse the string and print it. check if it is a palindrome string or not. python
+#students should not use [::-1]
+def reverse_str(n):
+    x = ''
+    for i in range(len(n)-1,-1,-1):
+        x += n[i]
+    if n == x:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+n = input("Enter a string: ")
+reverse_str(n)
+
+
+#take a string. count how many vowels are there in the string. you have considered both small
+#letters and capital letters.
+def count_vowels(n):
+    count = 0
+    vowel = ['a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U']
+    for i in range(len(n)):
+        if n[i] in vowel:
+            count += 1
+    print("Number of vowels:", count)
+n = input("Enter a string: ")
+count_vowels(n)
+
+
+#take a string. replace vowels in the string with letter z. After that print the string.
+def replace_vowels(n):
+    vowel = ['a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U']
+    replaced = ''
+    for i in range(len(n)):
+        if n[i] in vowel:
+            replaced += 'z'
+        else:
+            replaced += n[i]
+    print(replaced)
+n = input("Enter a string: ")
+replace_vowels(n)
+
+
+#take a string, count how many words are there. assume that there are no extra spaces in the
+#string and there are no spaces at the beginning and and the end.
+def words_count(n):
+    words = 0
+    for i in range(len(n)):
+        if n[i] == ' ':
+            words += 1
+    print("Number of words:", words+1)
+n = input("Enter a string: ")
+words_count(n)
+
+
+# take 2 strings. find those 2 strings are anagrams. if 2 strings are of same length, and made up of
+#same letters with dif combinations then it is anagram.
+def anagram_str(str1,str2):
+    if sorted(str1.lower()) == sorted(str2.lower()):
+        print("Anagram")
+    else:
+        print("Not Anagram")
+str1 = input("Enter 1st string: ")
+str2 = input("Enter 2nd string: ")
+anagram_str(str1,str2)
+
+
+#take a string. write logic to count how many no of times each letter is repeating in that string.
+#[letter occurrences]
+def count_letter(num):
+    num=num.replace(" ","")
+    count ={}
+    for char in num:
+        if char in count:
+            count[char] += 1
+        else:
+            count[char] = 1
+    for a,b in count.items():
+        print(a,'-',b)
+num = str(input('Enter a string number: '))
+count_letter(num)
+
+
+#take a statement. print words in the reverse order. eg: "palle tech pvt ltd" .
+#output : ltd pvt tech palle. student can use split() function
+def reverse_str(n):
+    word = n.split()
+    x = ''
+    for i in range(len(word)-1,-1,-1):
+        x += word[i] + ' '
+    print(x)
+n = input("Enter a string: ")
+reverse_str(n)
+
+
+#take a statement. print words in the reverse order. eg: "palle tech pvt ltd" . output : ellap hcet tvp
+#dtl. student can use split() function
+def reverse_each_word(text):
+    words = text.split()
+    x = ''
+    for i in range(len(words)):
+        x += words[i][::-1] + ' '
+    print(x.strip())
+text = input("Enter a sentence: ")
+reverse_each_word(text)
+
+
+#take a string, print unique letters present in the string.
+def unique(text):
+    for char in text:
+        if text.count(char) ==1:
+            print(char, end=" ")
+text = input("Enter a sentence: ")
+unique(text)
+
+#take a string, print duplicate letters present in the string.
+def duplicate(text):
+    for char in text:
+        if text.count(char) != 1:
+            print(char, end=" ")
+text = input("Enter a sentence: ")
+duplicate(text)
+'''
