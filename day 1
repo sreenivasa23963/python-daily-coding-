@@ -1,0 +1,186 @@
+'''
+x=100
+for i in range(1,100+1):
+    print(i,end=' ')
+    if i%10==0:
+        print()
+
+x=100
+for i in range(1,x+1):
+    if i%3==0 and i%5==0:
+        print("fizzbuzz",end=',')
+    elif i%3==0:
+        print("fizz",end=',')
+    elif i%5==0:
+        print("buzz",end=',')
+    else:
+        print(i,end=',')
+
+n = int(input("Enter a numbe :"))
+for i in range(1,10+1):
+    print(n,"*",i,"=",n*i)
+
+age = int(input("Enter your age :"))
+if age < 12:
+    print(age,"your are kid")
+elif age < 18:
+    print(age,"your are not eligible for vote")
+else:
+    print(age,"your are eligible for vote")
+
+age = list(map(int,input("Enter your ages : ").split()))
+for i in age:
+    if i < 12:
+        print(i, "your are kid")
+    elif i < 18:
+        print(i, "your are not eligible for vote")
+    else:
+        print(i, "your are eligible for vote")
+
+n = list(map(int,input("Enter number for sum : ").split()))
+sum = 0
+for i in range(0,len(n)):
+    sum += n[i]
+print(sum)
+
+n = list(map(int,input("Enter numbers to find biggest number : ").split()))
+big = n[0]
+for i in range(1,5):
+    if n[i] > big:
+        big = n[i]
+print(big)
+
+n = list(map(int,input("Enter numbers to find biggest number : ").split()))
+print(max(n))
+
+n = list(map(int,input("Enter numbers to find sum of even number : ").split()))
+even_count = 0
+for i in range(0,len(n)):
+    if n[i] % 2 == 0:
+        even_count += n[i]
+print(even_count)
+# 11 12 13 14 15 16 17 18 19 20
+
+n = list(map(int,input("Enter numbers to find biggest even number from the list : ").split()))
+even_count = []
+for i in range(0,len(n)):
+    if n[i] % 2 == 0:
+        even_count.append(n[i])
+print("Even number list",even_count)
+big = even_count[0]
+for j in range(1,len(even_count)):
+    if even_count[j] > big:
+        big = even_count[j]
+print(big)
+
+# or
+
+n = list(map(int,input("Enter numbers to find biggest even number from the list : ").split()))
+x = 0
+for i in range(0,len(n)):
+    if n[i] % 2 == 0 and n[i] > x:
+        x = n[i]
+print(x)
+
+n = list(map(int,input().split()))
+sum = 0
+for i in range(0,len(n)):
+    sum += n[i]
+print(sum/len(n))
+
+n = list(map(int,input("enter").split()))
+positive = 0
+negative = 0
+for i in range(0,len(n)):
+    if n[i] < 0:
+        positive += 1
+    else:
+        negative += 1
+print("number of positive numbers",positive)
+print("number of negative numbers",negative)
+
+n = list(map(int,input("Enter numbers to find sum of even number : ").split()))
+even = 0
+odd = 0
+for i in range(0,len(n)):
+    if n[i] % 2 == 0:
+        even += n[i]
+    else:
+        odd += n[i]
+print(even-odd)
+
+n = list(map(int,input("Enter numbers : ").split()))
+for i in range(0,len(n)):
+    if i % 2 == 0 and n[i] % 2 == 0:
+        print(n[i])
+
+s = input("Enter a string ")
+r = ''
+for i in range(len(s)-1,-1,-1):
+    r += s[i]
+if s == r:
+    print('palindrome')
+else:
+    print('not palindrome')
+
+s = input("Enter a string ")
+vowel ='a', 'e', 'i', 'o', 'u'
+count = 0
+for i in range(0,len(s)):
+    if s[i] in vowel:
+        count += 1
+print(count)
+
+s = input("Enter a string ")
+count = 0
+vowels = 'a', 'e', 'i', 'o', 'u'
+for i in range(0,len(s)):
+    if s[i] not in vowels:
+        count += 1
+print(count, 'consonants')
+
+s = input("Enter a string ")
+count = 0
+for i in range(len(s)):
+    if '0' <= s[i] and s[i] <= '9':
+        count += 1
+print(count)
+
+s = input("Enter a string ")
+at_count=0
+dot_count=0
+for i in range(len(s)):
+    if s[i] == '@':
+        at_count += 1
+    elif s[i] == '.':
+        dot_count += 1
+if at_count == 1 and dot_count == 1:
+    print('valid Gmail')
+else:
+    print('not valid Gmail')
+
+s = input("Enter a string ")
+count = 0
+for i in range(len(s)):
+    if s[i] == ' ':
+        count += 1
+print(count+1)
+
+or
+#only this is correct
+s = input("Enter a string: ")
+count = 0
+for i in range(len(s)):
+    if s[i] != ' ' and (i == 0 or s[i-1] == ' '):
+        count += 1
+print("Number of words:", count)
+
+or
+
+s = ' poi asdf   asd          rewq           sdf sd'
+count = 0
+for i in range(len(s)):
+    if s[i] == ' ' and s[i-1] != ' ':
+        count += 1
+print("Number of words:", count)
+'''
