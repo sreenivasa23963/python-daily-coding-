@@ -1,0 +1,71 @@
+def palindrome_check(n):
+    x=''
+    y=''
+    word_list = n.split()
+    for word in word_list:
+        if word == word[::-1]:
+            x +=word + ' '
+        else:
+            y +=word + ' '
+    print(x,'palindrome')
+    print(y,'not palindrome')
+n = input('Enter a sentence: ').lower()
+palindrome_check(n)
+
+29. prime number
+def prime_number(num):
+    if num <= 1:
+        print("Not a prime number")
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                print("Not a prime number")
+                break
+        else:
+            print("Prime number")
+
+num = int(input("Enter a number: "))
+prime_number(num)
+
+#30. fibonacci series
+def fibonacci(n):
+    a,b = 0,1
+    for _ in range(n):
+        a,b = b,a+b
+        print(a,end=" ")
+    print()
+n = int(input("Enter a number: "))
+fibonacci(n)
+
+#31. factorial of a number
+def factorial(n):
+    num = 1
+    for i in range(1,n+1):
+        num *= i
+    print(num)
+n = int(input("Enter a number: "))
+factorial(n)
+
+#32. palindrome number
+def palindrome(num):
+    num1 = str(num[::-1])
+    if num == num1:
+        print("Palindrome")
+    else:
+        print("Not a palindrome")
+num = input("Enter a number: ")
+palindrome(num)
+
+#33. armstrong number
+def armstrong(num):
+    len_num = len(str(num))
+    num_str = str(num)
+    total = 0
+    for i in num_str:
+        total += int(i) ** len_num
+    if num == total:
+        print("Armstrong")
+    else:
+        print("Not a armstrong")
+num = int(input("Enter a number: "))
+armstrong(num)
